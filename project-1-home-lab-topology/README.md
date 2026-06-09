@@ -40,6 +40,10 @@ VPC3 (10.0.1.10) --- Mikrotik1 --- Mikrotik2 --- VPC4 (10.0.3.10)
 ### End-to-End Ping — VPC3 to VPC4
 ![Ping](ping-end-to-end.png)
 
+### Router Configurations
+- [Mikrotik1 Config](mikrotik1-config.txt)
+- [Mikrotik2 Config](mikrotik2-config.txt)
+
 ## Troubleshooting Notes
 - FRRouting image caused kernel panics in GNS3 due to VirtualBox 7.2 
   incompatibility — resolved by migrating to EVE-NG
