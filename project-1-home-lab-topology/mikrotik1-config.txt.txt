@@ -1,0 +1,19 @@
+# jun/19/2026 17:43:35 by RouterOS 7.1
+# software id =
+#
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/port
+set 0 name=serial0
+/routing ospf instance
+add name=default router-id=1.1.1.1
+/routing ospf area
+add instance=default name=backbone
+/ip address
+add address=10.0.1.1/24 interface=ether1 network=10.0.1.0
+add address=10.0.2.1/24 interface=ether2 network=10.0.2.0
+/ip dhcp-client
+add interface=ether1
+/routing ospf interface-template
+add area=backbone networks=10.0.1.0/24
+add area=backbone networks=10.0.2.0/24
