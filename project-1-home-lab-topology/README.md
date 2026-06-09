@@ -1,8 +1,9 @@
-# Project 1 — Home Lab Topology
+# Project 1 — Home Lab Topology with OSPF
 
 ## Overview
-A simulated enterprise network built in EVE-NG using Mikrotik RouterOS.
-Demonstrates basic routing, IP addressing, and network segmentation.
+A simulated three-segment enterprise network built in EVE-NG using Mikrotik 
+RouterOS CHR 7.1. Demonstrates IP addressing, network segmentation, and OSPF 
+dynamic routing with verified end-to-end connectivity.
 
 ## Network Diagram
 VPC3 (10.0.1.10) --- Mikrotik1 --- Mikrotik2 --- VPC4 (10.0.3.10)
@@ -19,17 +20,36 @@ VPC3 (10.0.1.10) --- Mikrotik1 --- Mikrotik2 --- VPC4 (10.0.3.10)
 | VPC4 | eth0 | 10.0.3.10/24 |
 
 ## What I Built
-- Configured IP addresses on router interfaces
-- Built static routing tables so traffic forwards correctly between segments
-- Verified end-to-end connectivity with ping (TTL=62 confirming 2 router hops)
+- Configured IP addressing across 3 network segments
+- Implemented OSPF dynamic routing (Area 0 backbone)
+- Verified OSPF neighbor adjacency reached Full state
+- Confirmed routing table populated automatically via OSPF (DAo routes)
+- Verified end-to-end connectivity VPC3 → VPC4 with TTL=62 confirming 2 hops
+
+## Evidence
+- `topology.png` — EVE-NG canvas with all nodes running
+- `ospf-neighbor-full.png` — OSPF neighbor state Full
+- `routing-table-ospf.png` — Routing table with OSPF learned routes
+- `ping-end-to-end.png` — Successful ping VPC3 to VPC4
+- `mikrotik1-config.txt` — Full exported router configuration
+- `mikrotik2-config.txt` — Full exported router configuration
+
+## Troubleshooting Notes
+- FRRouting image caused kernel panics in GNS3 due to VirtualBox 7.2 
+  incompatibility — resolved by migrating to EVE-NG
+- VirtualBox 7.2 incompatible with GNS3 VM — downgraded to 7.0.22
+- Console access required manual port forwarding (32769/32770) from Windows 
+  host to EVE-NG VM due to NAT networking
 
 ## Tools Used
-- EVE-NG Community Edition
+- EVE-NG Community Edition 6.2.0
 - Mikrotik RouterOS CHR 7.1
 - VPCS (Virtual PC Simulator)
+- VirtualBox 7.0.22
 
 ## Key Concepts Demonstrated
-- IP subnetting and addressing
-- Static routing
-- Network segmentation
-- TTL and hop counting
+- IP subnetting and interface addressing
+- OSPF dynamic routing protocol (OSPFv2, Area 0)
+- Network segmentation across multiple subnets
+- Neighbor adjacency and routing table verification
+- TTL analysis to confirm routing hops
