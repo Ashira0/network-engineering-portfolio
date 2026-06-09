@@ -27,12 +27,18 @@ VPC3 (10.0.1.10) --- Mikrotik1 --- Mikrotik2 --- VPC4 (10.0.3.10)
 - Verified end-to-end connectivity VPC3 → VPC4 with TTL=62 confirming 2 hops
 
 ## Evidence
-- `topology.png` — EVE-NG canvas with all nodes running
-- `ospf-neighbor-full.png` — OSPF neighbor state Full
-- `routing-table-ospf.png` — Routing table with OSPF learned routes
-- `ping-end-to-end.png` — Successful ping VPC3 to VPC4
-- `mikrotik1-config.txt` — Full exported router configuration
-- `mikrotik2-config.txt` — Full exported router configuration
+
+### Topology
+![Topology](topology.png)
+
+### OSPF Neighbor Adjacency — Full State
+![OSPF Neighbor](ospf-neighbor-full.png)
+
+### Routing Table — OSPF Learned Routes
+![Routing Table](routing-table-ospf.png)
+
+### End-to-End Ping — VPC3 to VPC4
+![Ping](ping-end-to-end.png)
 
 ## Troubleshooting Notes
 - FRRouting image caused kernel panics in GNS3 due to VirtualBox 7.2 
