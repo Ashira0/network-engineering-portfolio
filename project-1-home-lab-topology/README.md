@@ -63,3 +63,6 @@ VPC3 (10.0.1.10) --- Mikrotik1 --- Mikrotik2 --- VPC4 (10.0.3.10)
 - Network segmentation across multiple subnets
 - Neighbor adjacency and routing table verification
 - TTL analysis to confirm routing hops
+
+## Video Walkthrough
+{Watch the lab demo](https://youtu.be/J1UR04r_PmI)
