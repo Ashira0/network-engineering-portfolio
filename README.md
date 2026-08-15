@@ -16,7 +16,7 @@ Implements OSPF dynamic routing with verified end-to-end connectivity.
 
 `EVE-NG` `Mikrotik RouterOS` `OSPF` `IP Routing` `Network Segmentation`
 
-### [Project 2 — OPNsense Firewall Lab](./project-2-opnsense-firewall)
+### [Project 2 — OPNsense Firewall Lab](./project-2-OPNsense-firewall)
 A stateful firewall deployed in EVE-NG using OPNsense. Implements LAN/WAN 
 segmentation with verified unidirectional traffic policy and firewall logging.
 
