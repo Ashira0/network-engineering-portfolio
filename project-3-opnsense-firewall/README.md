@@ -1,4 +1,4 @@
-# Project 3 — OPNsense Firewall Lab
+# Project 2 — OPNsense Firewall Lab
 
 ## Overview
 A three-zone firewall deployment using OPNsense in EVE-NG. Demonstrates 
