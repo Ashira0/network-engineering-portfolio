@@ -28,7 +28,7 @@ segmentation with verified unidirectional traffic policy and firewall logging.
 - **Simulation:** EVE-NG Community Edition
 - **Routing OS:** Mikrotik RouterOS CHR
 - **Protocols:** OSPF, TCP/IP
-- **Certifications in progress:** CompTIA Security+, CCNA
+- **Certifications:** CompTIA Security+, CCNA
 
 ## Contact
 - **LinkedIn:** linkedin.com/in/ashkon-irani
